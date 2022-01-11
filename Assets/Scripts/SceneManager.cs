@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region singleton
+    private static SceneManager instance;
+    public static SceneManager Instance
     {
-        
+        get { return instance; }
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion
+    void Awake()
     {
-        
+        if (instance == null)
+            instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void ChangeScene(int index)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(index);
+    }
+
+    public void PendLoadScene(int index)
+    {
+        if (index == 1)
+        {
+            ChangeScene(1);
+        }
     }
 }
