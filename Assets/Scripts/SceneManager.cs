@@ -31,5 +31,14 @@ public class SceneManager : MonoBehaviour
         {
             ChangeScene(1);
         }
+        if (index == 2)
+        {
+            ChangeScene(2);
+        }
+        if (index == 0)
+        {
+            ChangeScene(0);
+            Destroy(this);
+        }
     }
 }

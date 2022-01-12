@@ -13,7 +13,8 @@ public class StatsManager : MonoBehaviour
     }
     #endregion
 
-    string userName;
+    public string userName;
+    public int score;
 
     void Awake()
     {
@@ -23,15 +24,8 @@ public class StatsManager : MonoBehaviour
 
     public void CheckName()
     {
-        if (GameObject.Find("if_name").GetComponent<InputField>().text.Length <= 4)
-            GameObject.Find("btn_start").GetComponent<Button>().enabled = true;
-        else
-            GameObject.Find("btn_start").GetComponent<Button>().enabled = false;
+        GameObject.Find("btn_start").GetComponent<Button>().interactable =
+            GameObject.Find("if_name").GetComponent<InputField>().text.Length >= 4 ? true : false;
         userName = GameObject.Find("if_name").GetComponent<InputField>().text;
-    }
-
-    public void SetStats()
-    {
-        // TODO
     }
 }
