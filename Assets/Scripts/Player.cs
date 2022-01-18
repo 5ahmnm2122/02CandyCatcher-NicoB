@@ -11,18 +11,20 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         CanvasManager.Instance.score.text = score.ToString();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(20 * Vector2.left);
+            rb.AddForce(50 * Vector2.left);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(-20 * Vector2.left);
+            rb.AddForce(-50 * Vector2.left);
         }
+        rb.AddForce(Input.GetAxis("Mouse X") * -50f * Vector2.left);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

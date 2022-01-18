@@ -23,8 +23,14 @@ public class CandySpawner : MonoBehaviour
         bool isBad = Random.Range(0, 2) != 0;
         if (isBad)
             instance.GetComponent<SpriteRenderer>().color = Color.black;
-        yield return new WaitForSeconds(Random.Range(0.2f, 1f));
+        SpriteRenderer[] dots = instance.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer dot in dots)
+        {
+            if (dot.GetComponent<RectTransform>() != instance.GetComponent<RectTransform>())
+                dot.GetComponent<RectTransform>().localPosition = new Vector2(Random.Range(-10, 10), Random.Range(-10, 10));
+        }
         Destroy(instance, 4);
+        yield return new WaitForSeconds(Random.Range(0.2f, 1f));
         StartCoroutine(SpawnCandy());
     }
 

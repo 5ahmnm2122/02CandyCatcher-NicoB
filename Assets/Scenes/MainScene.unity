@@ -6244,5 +6244,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: CandyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7886442734572762163, guid: 7512c8f3ed7b3594eb62becc8f92b704, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7512c8f3ed7b3594eb62becc8f92b704, type: 3}
