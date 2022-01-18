@@ -179,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16032369d0a008b43bc2a637b85b642a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: 
+  score: 0
 --- !u!1 &415224144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gib deinen Namen ein:'
+  m_Text: 'Enter your name:'
 --- !u!222 &1780961174
 CanvasRenderer:
   m_ObjectHideFlags: 0

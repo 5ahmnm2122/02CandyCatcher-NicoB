@@ -19,6 +19,8 @@ WebGL
 TODO
 
 ### Third party material: 
+- Background: https://cdn.wallpapersafari.com/90/7/KGe7I0.jpg
+- Floor: https://i.pinimg.com/736x/4d/2c/19/4d2c1913140456e53f1938b2d35b40cf.jpg
 
 
 ### Project state: 

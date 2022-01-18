@@ -24,6 +24,7 @@ public class CandySpawner : MonoBehaviour
         if (isBad)
             instance.GetComponent<SpriteRenderer>().color = Color.black;
         yield return new WaitForSeconds(Random.Range(0.2f, 1f));
+        Destroy(instance, 4);
         StartCoroutine(SpawnCandy());
     }
 

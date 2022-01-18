@@ -30,8 +30,20 @@ public class Player : MonoBehaviour
         if (collision.tag == "Candy")
         {
             score = collision.GetComponent<SpriteRenderer>().color == Color.black ? score -= 1 : score += 1;
-            CanvasManager.Instance.score.text = score.ToString();
-            StatsManager.Instance.score = score;
+            try
+            {
+                CanvasManager.Instance.score.text = score.ToString();
+                StatsManager.Instance.score = score;
+                if (score <= -5)
+                {
+                    SceneManager.Instance.PendLoadScene(2);
+                }
+
+            }
+            catch (System.Exception)
+            {
+                Debug.LogWarning("Start in first scene!");
+            }
             Destroy(collision.gameObject);
         }
     }

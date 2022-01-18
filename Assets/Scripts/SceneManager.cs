@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
@@ -27,18 +28,18 @@ public class SceneManager : MonoBehaviour
 
     public void PendLoadScene(int index)
     {
-        if (index == 1)
-        {
-            ChangeScene(1);
-        }
-        if (index == 2)
-        {
-            ChangeScene(2);
-        }
         if (index == 0)
         {
             ChangeScene(0);
-            Destroy(this);
+            Destroy(this.gameObject);
+        }
+        else if (index == 1)
+        {
+            ChangeScene(1);
+        }
+        else if (index == 2)
+        {
+            ChangeScene(2);
         }
     }
 }
