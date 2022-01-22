@@ -1,10 +1,12 @@
 # 02CandyCatcher-NicoB
 
 ## Finished project:
-TODO
+https://5ahmnm2122.github.io/02CandyCatcher-NicoB/
 
 ### Project description: 
-TODO
+- Enter name in first scene
+- Play main level, move with "a" or "d" / mouse, red candies are good, black ones bad
+- See your score in the last level and eventually restart game
 
 ### Development platform: 
 OS: Windows 11, Game Engine: Unity 2020.3.18f1, Visual Studio 2019
@@ -24,8 +26,8 @@ TODO
 
 
 ### Project state: 
-0%/100% finished
-<progress max="100" value="0"></progress>
+100%/100% finished
+<progress max="100" value="100"></progress>
 
 ### Limitations: 
 none
