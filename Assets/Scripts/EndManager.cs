@@ -11,6 +11,7 @@ public class EndManager : MonoBehaviour
     void Start()
     {
         FillInValues();
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void FillInValues()
