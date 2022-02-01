@@ -18,7 +18,7 @@ WebGL has to be enabled/installed
 WebGL
 
 ### Visuals: 
-TODO
+![MainScene](./Screenshots/img1.png)
 
 ### Third party material: 
 - Background: https://cdn.wallpapersafari.com/90/7/KGe7I0.jpg
